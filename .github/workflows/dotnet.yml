@@ -29,9 +29,8 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release -o website
     - name: Upload a Build Artifact
-  uses: actions/upload-artifact@v7.0.1
-  with:
-    # Artifact name. If the `archive` input is `false`, the name of the file uploaded will be the artifact name.
-    name: webapp
-    path: website/**
-    if-no-files-found: warn
+      uses: actions/upload-artifact@v7.0.1
+      with:   
+        name: webapp
+        path: website/**
+        if-no-files-found: warn
